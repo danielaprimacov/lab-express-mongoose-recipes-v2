@@ -113,7 +113,7 @@ app.put("/recipes/:id", (req, res) => {
 app.delete("/recipes/:id", (req, res) => {
   const { id } = req.params;
   Recipe.findByIdAndDelete(id)
-    .then(() => res.status(200).json({ message: "Recipe was deleted!" }))
+    .then(() => res.status(204).json({ message: "Recipe was deleted!" }))
     .catch((error) => res.status(500).json(error));
 });
 
