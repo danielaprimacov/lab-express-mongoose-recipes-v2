@@ -53,7 +53,7 @@ app.post("/recipes", (req, res) => {
     isArchived,
     created,
   })
-    .then((newRecipe) => res.status(200).json(newRecipe))
+    .then((newRecipe) => res.status(201).json(newRecipe))
     .catch((error) => res.status(500).json(error));
 });
 
